@@ -1,14 +1,21 @@
 // Auto-generated via `yarn polkadot-types-from-chain`, do not edit
 /* eslint-disable */
 
+// import type lookup before we augment - in some environments
+// this is required to allow for ambient/previous definitions
+import '@polkadot/api-base/types/storage';
+
 import type { NodePrimitivesCurrencyCurrencyId, OrmlTokensAccountData, OrmlTokensBalanceLock, OrmlTokensReserveData } from '@bifrost-finance/types/interfaces/primitives';
 import type { AccountId32 } from '@bifrost-finance/types/interfaces/runtime';
-import type { ApiTypes } from '@polkadot/api-base/types';
+import type { ApiTypes, AugmentedQuery, QueryableStorageEntry } from '@polkadot/api-base/types';
 import type { Vec, u128 } from '@polkadot/types-codec';
 import type { Observable } from '@polkadot/types/types';
 
+export type __AugmentedQuery<ApiType extends ApiTypes> = AugmentedQuery<ApiType, () => unknown>;
+export type __QueryableStorageEntry<ApiType extends ApiTypes> = QueryableStorageEntry<ApiType>;
+
 declare module '@polkadot/api-base/types/storage' {
-  export interface AugmentedQueries<ApiType extends ApiTypes> {
+  interface AugmentedQueries<ApiType extends ApiTypes> {
     tokens: {
       /**
        * The balance of a token type under an account.

@@ -1,14 +1,22 @@
 // Auto-generated via `yarn polkadot-types-from-chain`, do not edit
 /* eslint-disable */
 
+// import type lookup before we augment - in some environments
+// this is required to allow for ambient/previous definitions
+import '@polkadot/api-base/types/submittable';
+
 import type { NodePrimitivesCurrencyCurrencyId } from '@bifrost-finance/types/interfaces/primitives';
 import type { MultiAddress } from '@bifrost-finance/types/interfaces/runtime';
-import type { ApiTypes } from '@polkadot/api-base/types';
+import type { ApiTypes, AugmentedSubmittable, SubmittableExtrinsic, SubmittableExtrinsicFunction } from '@polkadot/api-base/types';
 import type { Compact, bool, i128, u128 } from '@polkadot/types-codec';
 import type { AnyNumber } from '@polkadot/types-codec/types';
 
+export type __AugmentedSubmittable = AugmentedSubmittable<() => unknown>;
+export type __SubmittableExtrinsic<ApiType extends ApiTypes> = SubmittableExtrinsic<ApiType>;
+export type __SubmittableExtrinsicFunction<ApiType extends ApiTypes> = SubmittableExtrinsicFunction<ApiType>;
+
 declare module '@polkadot/api-base/types/submittable' {
-  export interface AugmentedSubmittables<ApiType extends ApiTypes> {
+  interface AugmentedSubmittables<ApiType extends ApiTypes> {
     currencies: {
       /**
        * Transfer some balance to another account under `currency_id`.

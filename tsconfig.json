@@ -7,15 +7,17 @@
   "compilerOptions": {
     "target": "es2019",
     "module": "CommonJS",
-    "baseUrl": ".",
+    "baseUrl": "packages",
     "resolveJsonModule": true,
+    "declaration": true,
+    "declarationDir": "build",
     "paths": {
-      "@bifrost-finance/api": ["packages/api/src"],
-      "@bifrost-finance/api/*": ["packages/api/src/*"],
-      "@bifrost-finance/types": ["packages/types/src"],
-      "@bifrost-finance/types/*": ["packages/types/src/*"],
-      "@bifrost-finance/type-definitions": ["packages/type-definitions/src"],
-      "@bifrost-finance/type-definitions/*": ["packages/type-definitions/src/*"]
+      "@bifrost-finance/api": ["api/src"],
+      "@bifrost-finance/api/*": ["api/src/*"],
+      "@bifrost-finance/types": ["types/src"],
+      "@bifrost-finance/types/*": ["types/src/*"],
+      "@bifrost-finance/type-definitions": ["type-definitions/src"],
+      "@bifrost-finance/type-definitions/*": ["type-definitions/src/*"]
     },
     "skipLibCheck": true,
     "typeRoots": ["./node_modules/@polkadot/ts", "./node_modules/@types"]
