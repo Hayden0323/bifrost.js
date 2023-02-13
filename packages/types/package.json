@@ -30,9 +30,9 @@
     "@bifrost-finance/type-definitions": "^1.7.2",
     "@open-web3/api-mobx": "^0.9.4-38",
     "@open-web3/orml-types": "^0.9.4-38",
-    "@polkadot/api": "^9.10.2",
-    "@polkadot/typegen": "^9.10.2",
-    "@polkadot/types": "^9.10.2"
+    "@polkadot/api": "^9.14.1",
+    "@polkadot/typegen": "^9.14.1",
+    "@polkadot/types": "^9.14.1"
   },
   "devDependencies": {
     "@types/websocket": "^1.0.0",
